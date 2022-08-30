@@ -1,0 +1,186 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.7%;
+    margin: auto;
+  }
+  
+  .container {
+    position: relative;
+    width: 95vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px hsla(0, 0%, 20%, .1);
+    padding:20px 10px;
+    background:#fff;
+    border-radius:5px;
+    margin:15px 0;
+  }
+
+@media (max-width: 430px) {
+    .container {
+      width: 95vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+}  
+
+@media (min-width: 700px) {
+    section {
+        max-width: 600px;
+        margin: O auto !important;
+    }
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+   
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container video {
+    width: 100%;
+    height: 100%;
+}
+
+.video-container .controls-container {
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+    width: 100% !important;
+}
+
+.video-container .controls-container .progress-controls {
+    width: 100%;
+    height: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.video-container .controls-container .progress-controls .progress-bar {
+    position: relative;
+    width: 100%;
+    height: 3.5px;
+    background: #424242;
+    display: flex;
+    align-items: center;
+}
+
+.video-container .controls-container .progress-controls .progress-bar .progress {
+    position: absolute;  
+    left: 0; 
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.video-container .controls-container .progress-controls .progress-bar .progress .watched-progress {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.video-container .controls-container .progress-controls .progress-bar .progress .watched-bar {
+    background: #e31221;
+    width: 0%;
+    height: 100%;
+    transition: height 0.2s;
+}
+
+.video-container .controls-container .progress-controls .progress-bar .progress .playhead {
+    position: absolute;
+    background: #e31221;
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: width 0.2s, height 0.2s;
+}
+
+.video-container .controls-container .progress-controls:hover > .progress-bar {
+    height: 5px;
+}
+
+.video-container .controls-container .progress-controls:hover > .progress-bar .progress .playhead {
+    height: 15px;
+    width: 15px;
+}
+
+.video-container .controls-container .controls {
+    position: relative;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-container .controls-container .controls .btn {
+    background: none;
+    width: 45px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.video-container .controls-container .controls .left-side-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    flex-grow: 2;
+}
+
+.video-container .controls-container .controls .left-side-controls .time-display {
+    color: #ffffff;
+    font-size: 13px;
+    padding: 0 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.video-container .controls-container .controls .right-side-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+} 
+
+
+.video-bottom-section{
+    width:88vw;
+  }
+  
+  .download-btn {
+    width:88vw;
+    border:1px solid black;
+    padding:10px 0;
+    background:green;
+    text-align:center;
+    border-radius:5px;
+    text-decoration:none;
+    color:#fff;
+    margin:15px 0 0 0;
+  }
+

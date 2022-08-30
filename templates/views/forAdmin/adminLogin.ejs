@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <!-- navbar styling -->
+    <link href="./css/navbar.css" rel="stylesheet">
+    <!--admin login css-->
+    <link rel="stylesheet" href="./css/adminLogin.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+  </head>
+  <body>
+  <section class="admin" >
+    <div class="main">
+      <div class="wrapper">
+        <div class="title"><span>Login Form</span></div>
+        <form action="/adminlogin" method="POST">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Username" required name="username">
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" required name="password">
+          </div>
+         <!-- <div class="pass"><a href="#">Forgot password?</a>-->
+          <div class="row button">
+            <input type="submit" value="Login">
+          </div>
+          <div class="signup-link"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>

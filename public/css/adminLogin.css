@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  background: ;
+  overflow: hidden;
+}
+::selection{
+  background: rgba(26,188,156,0.3);
+}
+.admin .main{
+  max-width: 440px;
+  padding: 0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100vw;
+  height:100vh;
+}
+.admin .wrapper{
+  width: 100%;
+  max-width:400px;
+  background: #fff;
+  border-radius: 5px;
+  border:1px solid #11406a;
+  box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.1);
+}
+.admin .wrapper .title{
+  height: 90px;
+  background:#11406a;;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin .wrapper form{
+  padding: 30px 25px 25px 25px;
+}
+.wrapper form .row{
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+.admin .wrapper form .row input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.admin form .row input:focus{
+  border-color: #11406a;
+  box-shadow: inset 0px 0px 2px 2px #11406a;
+}
+.admin form .row input::placeholder{
+  color: #999;
+}
+.admin .wrapper form .row i{
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #11406a;
+  border: 1px solid #11406a;
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin .wrapper form .pass{
+  margin: -8px 0 20px 0;
+}
+.admin .wrapper form .pass a{
+  color: #11406a;
+  font-size: 17px;
+  text-decoration: none;
+}
+.admin .wrapper form .pass a:hover{
+  text-decoration: underline;
+}
+.admin .wrapper form .button input{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding-left: 0px;
+  background: #11406a;
+  border: 1px solid #11406a;
+  cursor: pointer;
+}
+.admin form .button input:hover{
+  background:transparent;
+  color:#11406a;
+}
+.admin .wrapper form .signup-link{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 17px;
+}
+.admin .wrapper form .signup-link a{
+  color: #16a085;
+  text-decoration: none;
+}
+.admin form .signup-link a:hover{
+  text-decoration: underline;
+}

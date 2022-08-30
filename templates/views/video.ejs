@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Video Player</title>
+    <link rel="stylesheet" href="/css/video.css">
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="header">
+        <a href="#">
+            <img src="/img/logo/logo.png" alt="YouTube Logo" class="youtube-logo" />
+        </a>
+        <div class="search">
+            <div class="searchbar">
+                <input type="text" class="searchbar__input" name="q" placeholder="Search..." id="search">
+                <a href="#table" id="searchBtn" class="searchbar__button" onclick="sendData()">
+                    <i><img src="/img/icon/search.png"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+        <div class="container">
+
+            <div class="video-container">
+                <video>
+                    <source src="/stream/video/<%= video._id %>" type="video/mp4">
+                </video>
+
+                <div class="controls-container">
+                    <div class="progress-controls">
+                        <div class="progress-bar">
+                            <div class="progress">
+                                <div class="watched-progress">
+                                    <div class="watched-bar"></div>
+                                    <div class="playhead"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <div class="left-side-controls">
+                            <div class="play-pause-btn btn">
+                                <img draggable="false" class="play" src="/svg/play.svg" alt="" width="20px">
+                                <img draggable="false" class="pause" src="/svg/pause.svg" alt="" width="20px">
+                            </div>
+                            <div class="next-video-btn btn">
+                                <img draggable="false" src="/svg/next.svg" alt="" width="15px">
+                            </div>
+                            <div class="volume-control">
+                                <div class="volume-btn btn">
+                                    <img draggable="false" class="full-volume" src="/svg/volume.svg" alt=""
+                                        width="20px">
+                                    <img draggable="false" class="muted" src="/svg/mute.svg" alt="" width="20px">
+                                </div>
+                            </div>
+                            <div class="time-display">
+                                <span class="current-time">0:00</span>
+                                <span class="time-separator">&nbsp/&nbsp</span>
+                                <span class="Video-duration"><%= video.time %></span>
+                            </div>
+                        </div>
+
+                        <div class="right-side-controls">
+                            <div class="settings-btn btn">
+                                <img src="/svg/settings.svg" draggable="false" alt="" width="20px">
+                            </div>
+                            <div class="full-screen-btn btn">
+                                <img class="maximize" draggable="false" src="/svg/maximize-screen.svg" alt=""
+                                    width="18px">
+                                <img class="minimize" draggable="false" src="/svg/minimize-screen.svg" alt=""
+                                    width="20px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="video-bottom-section">
+                <div class="video-details">
+                    <a href="#" class="video-title">
+                        <%= video.title %>
+                    </a>
+                </div>
+            </div>
+            <a href="/download/<%= video._id %>" class="download-btn">Download</a>
+        </div>
+    </section>
+
+
+    <script src="/js/video.js"></script>
+    <script src="/js/sendToSesson.js"></script>
+</body>
+
+</html>

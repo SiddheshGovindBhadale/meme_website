@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#11406a" />
+  <!-- BOXICONS -->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- UNICONS -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- loader css -->
+  <link href="../css/loader.css" rel="stylesheet"  >
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>SIRU Studio</title>
+</head>
+<body>
+  <header class="header">
+    <a href="#">
+      <img src="./img/logo/logo.png" alt="YouTube Logo" class="youtube-logo" />
+    </a>
+    <div class="search">
+         <div class="searchbar">
+              <input type="text" class="searchbar__input" name="q" placeholder="Search..." id="search">
+              <a href="#table" id="searchBtn" class="searchbar__button" onclick="Search()">
+                   <i><img src="./img/icon/search.png"></i>
+              </a>
+         </div>
+    </div>
+  </header>
+  
+  <!--<div class="categories">
+    <section class="category-section">
+      <button class="category active">All</button>
+      <button class="category">Category 1</button>
+      <button class="category">Category 2</button>
+      <button class="category">Category 3</button>
+      <button class="category">Category 4</button>
+      <button class="category">Category 5</button>
+      <button class="category">Category 6</button>
+      <button class="category">Category 7</button>
+      <button class="category">Category 8</button>
+      <button class="category">Category 9</button>
+    </section>
+  </div>-->
+  
+  <div class="videos">
+    <section class="video-section">
+      
+      <% if(videos != null) { %>
+         <% videos.forEach(function(video , index) { %>
+             <article class="video-container">
+                   <a href="stream/<%= video._id %>" class="thumbnail" data-duration="<%= video.time %>">
+                        <img class="thumbnail-image" src="/product/<%= video.image[video.image[0].mimetype == "image/png" || video.image[0].mimetype == "image/jpg" ? 0 : 1].filename %>" />
+                   </a>
+                   <div class="video-bottom-section">
+                        <div class="video-details">
+                             <a href="stream/<%= video._id %>" class="video-title"><%= video.title %></a>
+                        </div>
+                        <a href="/download/<%= video._id %>" class="download-btn">
+                             <img src="./img/icon/download.png">
+                        </a>
+                        <span style="display:none"><%= video.discretion %></span>
+                   </div>
+             </article>
+         <% }); %> 
+      <% } else{ %>
+           <div class='error'>
+                No Post Found !!
+           </div>
+      <% } %>
+     
+    </section>
+  </div>
+  
+  <script src="./js/search.js"></script>
+</body>
+</html>

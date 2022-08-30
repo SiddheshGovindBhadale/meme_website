@@ -1,0 +1,129 @@
+body{
+  background:#eeeeee !important;
+}
+
+li{list-style:none;}
+
+/* search bar */
+.search{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+
+.searchbar {
+    width: 100%;
+    max-width: 340px;
+    display: inline-flex;
+    margin:20px 10px;
+    
+}
+
+.searchbar--max-width {
+    max-width: 100%;
+}
+
+.searchbar__input {
+    flex-grow: 1;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #11406a;
+    border-radius: 5px 0 0 5px;
+    background: #fff;
+    transition: background 0.25s, box-shadow 0.25s;
+}
+
+.searchbar__input:focus {
+    background: white;
+    box-shadow: 0 0 2px #8CC6BA;
+}
+
+.searchbar__input::placeholder {
+    color: #11406a;
+}
+
+.searchbar__button {
+    width: 40px;
+    background:#11406a;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    user-select: none;
+    text-decoration:none;
+}
+
+.searchbar__button:active {
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.25);
+}
+
+.show{
+     animation: fadeIn 0.5s ease;
+ }
+@keyframes fadeIn{
+   0%{
+     opacity: 0;
+   }
+   100%{
+     opacity: 1;
+   }
+ }
+ .hide{
+     display: none;
+ }
+
+
+
+
+.changeBtn {
+  width:100%;
+  padding:25px 10px;
+}
+
+.changeBtn button {
+  display:block;
+  float:left;
+  width:50%;
+  padding:8px 0;
+  border:none;
+  border:2px solid #11406a;
+  transition:all .2s;
+  outline:none;
+}
+
+.changeBtn button.active{
+  background:#11406a;
+  color:#fff;
+}
+
+#change {
+  transition:all .3s;
+}
+
+#myServices form , .booking form{
+  max-width:360px;
+  padding:35px 15px;
+  margin:40px 10px;
+  background:#fff;
+  border-radius:5px;
+  box-shadow: 0 4px 12px hsla(0, 0%, 20%, .1);
+}
+
+#myServices .upload , .booking .upload {
+  display:none;
+}
+
+#myServices .form-control ,.booking .form-control {
+  margin:10px 0;
+}
+
+@media screen and (min-width: 400px) {
+  #myServices form ,.booking form{
+    margin: 40px auto;
+  }
+}
